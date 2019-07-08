@@ -45,32 +45,32 @@ void loop() {
   
   //Sensor Control
   if (GS_Read > 850) {
-    digitalWrite(Presence_Sensor_Led,!PS_Read);
+    digitalWrite(Presence_Sensor_Led,PS_Read);
     digitalWrite(Most_Bit,LOW);
     digitalWrite(Middle_Bit,HIGH);
     digitalWrite(Least_Bit,LOW);
-    digitalWrite(Gas_Sensor_Led,LOW);
+    digitalWrite(Gas_Sensor_Led,HIGH);
     delay(1000);
-    digitalWrite(Presence_Sensor_Led,!PS_Read);
+    digitalWrite(Presence_Sensor_Led,PS_Read);
     digitalWrite(Most_Bit,LOW);
     digitalWrite(Middle_Bit,HIGH);
     digitalWrite(Least_Bit,HIGH);
-    digitalWrite(Gas_Sensor_Led,LOW);
+    digitalWrite(Gas_Sensor_Led,HIGH);
     delay(1000);
-    digitalWrite(Presence_Sensor_Led,!PS_Read);
+    digitalWrite(Presence_Sensor_Led,PS_Read);
     digitalWrite(Most_Bit,HIGH);
     digitalWrite(Middle_Bit,HIGH);
     digitalWrite(Least_Bit,HIGH);
-    digitalWrite(Gas_Sensor_Led,LOW);
+    digitalWrite(Gas_Sensor_Led,HIGH);
     delay(1000);
   }
   else
   {
-    digitalWrite(Presence_Sensor_Led,!PS_Read);
+    digitalWrite(Presence_Sensor_Led,PS_Read);
     digitalWrite(Most_Bit,LOW);
     digitalWrite(Middle_Bit,LOW);
     digitalWrite(Least_Bit,LOW);
-    digitalWrite(Gas_Sensor_Led,HIGH);
+    digitalWrite(Gas_Sensor_Led,LOW);
   }
   delay(1000);
 }
